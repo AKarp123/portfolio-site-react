@@ -15,8 +15,10 @@ const darkTheme = createTheme({
 function App() {
     return (
         <div className="App">
-            <ThemeProvider theme={darkTheme}>{/* <Navbar /> */}</ThemeProvider>
-            {routes()}
+            <ThemeProvider theme={darkTheme}>
+                {/* <Navbar /> */}
+                {routes()}
+            </ThemeProvider>
         </div>
     );
 }

@@ -1,9 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import NavHome from "./NavHome";
 
 export default class AboutMe extends Component {
-  render() {
-    return (
-      <div>AboutM e</div>
-    )
-  }
+    render() {
+        return (
+            <>
+                <NavHome />
+                <div>AboutMe</div>
+            </>
+        );
+    }
 }
