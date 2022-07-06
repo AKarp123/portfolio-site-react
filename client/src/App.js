@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+// import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import { Switch, Route, BrowserRouter } from "react-router-dom";
+import AboutMe from "./components/AboutMe";
+import projects from "./components/Projects";
+
+const darkTheme = createTheme({
+    palette: {
+        mode: "dark",
+    },
+});
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <ThemeProvider theme={darkTheme}>{/* <Navbar /> */}</ThemeProvider>
+            {routes()}
+        </div>
+    );
 }
+
+const routes = () => {
+    return (
+        <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={AboutMe} />
+            <Route exact path="/projects" component={projects} />
+        </Switch>
+    );
+};
 
 export default App;
