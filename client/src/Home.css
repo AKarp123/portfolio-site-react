@@ -9,4 +9,14 @@
 .Home-Link:hover {
     color: #0091ff;
 }
+
+.Home-Github {
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
+
+.Home-Github-Hover {
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+}
     

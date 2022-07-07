@@ -9,18 +9,27 @@ const homeLinkStyles = () => ({
 });
 
 export default function Home() {
+    const [hover, setHover] = React.useState(false);
+
     return (
         <>
             <div style={{ height: "35vh" }}></div>
             <Grid container spacing={3} justifyContent="center">
                 <Grid item xs={2} sx={{ alignItems: "flex-start" }}>
-                    <h1>Ashton Karp</h1>
-                    <a href="https://github.com/AKarp123/" >
-                        <img
-                            src={Github}
-                            style={{ height: "250px", width: "250px" }}
-                        ></img>
-                    </a>
+                    <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+                        <h1>Ashton Karp</h1>
+                        <a
+                            href="https://github.com/AKarp123/"
+                            className={
+                                hover ? "Home-Github-Hover" : "Home-Github"
+                            }
+                        >
+                            <img
+                                src={Github}
+                                style={{ height: "250px", width: "250px" }}
+                            ></img>
+                        </a>
+                    </ div>
                 </Grid>
                 <Grid item xs={2}>
                     <Typography
