@@ -19,4 +19,9 @@
     transition: opacity 1s ease-in-out;
     opacity: 1;
 }
+
+.Home-Name {
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-weight: bold;
+}
     

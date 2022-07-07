@@ -16,8 +16,12 @@ export default function Home() {
             <div style={{ height: "35vh" }}></div>
             <Grid container spacing={3} justifyContent="center">
                 <Grid item xs={2} sx={{ alignItems: "flex-start" }}>
-                    <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
-                        <h1>Ashton Karp</h1>
+                    <div
+                        onMouseEnter={() => setHover(true)}
+                        onMouseLeave={() => setHover(false)}
+                    >
+                        <h1 className="Home-Name">Ashton Karp</h1>
+
                         <a
                             href="https://github.com/AKarp123/"
                             className={
@@ -29,7 +33,7 @@ export default function Home() {
                                 style={{ height: "250px", width: "250px" }}
                             ></img>
                         </a>
-                    </ div>
+                    </div>
                 </Grid>
                 <Grid item xs={2}>
                     <Typography
