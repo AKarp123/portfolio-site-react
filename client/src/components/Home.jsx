@@ -13,9 +13,8 @@ export default function Home() {
 
     return (
         <>
-            <div style={{ height: "35vh" }}></div>
             <Grid container spacing={3} justifyContent="center">
-                <Grid item xs={2} sx={{ alignItems: "flex-start" }}>
+                <Grid item xs={2} sx={{ alignItems: "flex-start", marginTop: "35vh" }}>
                     <div
                         onMouseEnter={() => setHover(true)}
                         onMouseLeave={() => setHover(false)}
@@ -30,12 +29,13 @@ export default function Home() {
                         >
                             <img
                                 src={Github}
+                                alt="Github"
                                 style={{ height: "250px", width: "250px" }}
                             ></img>
                         </a>
                     </div>
                 </Grid>
-                <Grid item xs={2}>
+                <Grid item xs={2} sx={{marginTop: "35vh" }}>
                     <Typography
                         as={Link}
                         to="/about"

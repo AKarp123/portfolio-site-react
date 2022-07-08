@@ -1,12 +1,13 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import { Collapse } from "@mui/material";
-import {v4 }from "uuid";
+import {
+    Typography,
+    Card,
+    CardActions,
+    CardContent,
+    Button,
+    Collapse,
+} from "@mui/material";
+import { v4 } from "uuid";
 
 export default function Project(props) {
     const [isExpanded, setIsExpanded] = React.useState(false);
@@ -15,6 +16,12 @@ export default function Project(props) {
         setIsExpanded(!isExpanded);
     };
 
+    const srcCode = (repo) => (
+        <Button href={repo} size="small" target="_blank">
+            Source Code
+        </Button>
+    );
+
     return (
         <Card sx={{ minWidth: 275, textAlign: "left", marginBottom: "3vh" }}>
             <CardContent>
@@ -22,19 +29,18 @@ export default function Project(props) {
                     {props.title}
                 </Typography>
                 <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                    {" "}
-                    {/* Time making */}
                     {props.time}
                 </Typography>
                 <Typography variant="body2">{props.description}</Typography>
             </CardContent>
-            <CardActions>
-                <a href={props.link}>
-                    <Button size="small">Link to Site</Button>
-                </a>
+            <CardActions sx={{ display: "flex" }}>
+                <Button size="small" href={props.link}>
+                    Link to Site
+                </Button>
                 <Button size="small" onClick={HandleExpandClick}>
                     Tech Used
                 </Button>
+                {props.repo !== undefined ? srcCode(props.repo) : ""}
             </CardActions>
             <Collapse in={isExpanded} timeout="auto" unmountOnExit>
                 <CardContent>
