@@ -20,16 +20,21 @@ export default function Home() {
         return {
             opacity: loaded ? 1 : 0,
             transition: "opacity 1s ease-in-out",
-            
         };
     };
 
     return (
         <>
-            <Grid container spacing={3} justifyContent="center" sx={onLoadHome()}>
+            <Grid
+                container
+                spacing={3}
+                justifyContent="center"
+                sx={onLoadHome()}
+            >
                 <Grid
                     item
-                    xs={2}
+                    lg={2}
+                    xs={12}
                     sx={{ alignItems: "flex-start", marginTop: "35vh" }}
                 >
                     <div
@@ -52,7 +57,7 @@ export default function Home() {
                         </a>
                     </div>
                 </Grid>
-                <Grid item xs={2} sx={{ marginTop: "35vh" }}>
+                <Grid item lg={2} xs={12} sx={{ marginTop: "35vh" }}>
                     <Typography
                         as={Link}
                         to="/about"

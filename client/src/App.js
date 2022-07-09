@@ -1,8 +1,7 @@
 import "./App.css";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-// import Navbar from "./components/Navbar";
 import Home from "./components/Home";
-import { Switch, Route, BrowserRouter } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import AboutMe from "./components/AboutMe";
 import projects from "./components/Projects";
 
@@ -15,10 +14,7 @@ const darkTheme = createTheme({
 function App() {
     return (
         <div className="App">
-            <ThemeProvider theme={darkTheme}>
-                {/* <Navbar /> */}
-                {routes()}
-            </ThemeProvider>
+            <ThemeProvider theme={darkTheme}>{routes()}</ThemeProvider>
         </div>
     );
 }
