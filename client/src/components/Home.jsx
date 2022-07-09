@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Grid, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import "../Home.css";
@@ -10,11 +10,28 @@ const homeLinkStyles = () => ({
 
 export default function Home() {
     const [hover, setHover] = React.useState(false);
+    const [loaded, setLoaded] = React.useState(false);
+
+    useEffect(() => {
+        setLoaded(true);
+    }, []);
+
+    const onLoadHome = () => {
+        return {
+            opacity: loaded ? 1 : 0,
+            transition: "opacity 1s ease-in-out",
+            
+        };
+    };
 
     return (
         <>
-            <Grid container spacing={3} justifyContent="center">
-                <Grid item xs={2} sx={{ alignItems: "flex-start", marginTop: "35vh" }}>
+            <Grid container spacing={3} justifyContent="center" sx={onLoadHome()}>
+                <Grid
+                    item
+                    xs={2}
+                    sx={{ alignItems: "flex-start", marginTop: "35vh" }}
+                >
                     <div
                         onMouseEnter={() => setHover(true)}
                         onMouseLeave={() => setHover(false)}
@@ -35,7 +52,7 @@ export default function Home() {
                         </a>
                     </div>
                 </Grid>
-                <Grid item xs={2} sx={{marginTop: "35vh" }}>
+                <Grid item xs={2} sx={{ marginTop: "35vh" }}>
                     <Typography
                         as={Link}
                         to="/about"

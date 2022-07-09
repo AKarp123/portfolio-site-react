@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import { v4 } from "uuid";
 
+
 export default function Project(props) {
     const [isExpanded, setIsExpanded] = React.useState(false);
 
@@ -33,9 +34,9 @@ export default function Project(props) {
                 </Typography>
                 <Typography variant="body2">{props.description}</Typography>
             </CardContent>
-            <CardActions sx={{ display: "flex" }}>
-                <Button size="small" href={props.link}>
-                    Link to Site
+            <CardActions disableSpacing>
+                <Button type="text"size="small" href={props.link}>
+                    Link to App
                 </Button>
                 <Button size="small" onClick={HandleExpandClick}>
                     Tech Used
