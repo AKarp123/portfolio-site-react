@@ -39,7 +39,13 @@ export default class Projects extends Component {
                 <NavHome />
 
                 <Container maxWidth="lg">
-                    <Typography variant="h4" component="h1" gutterBottom>
+                    <Typography
+                        variant="h4"
+                        component="h1"
+                        paddingBottom="0.7em"
+                        marginBottom="0.7em"
+                        borderBottom={"2px solid white"}
+                    >
                         My Projects
                     </Typography>
                     {projects.map((project) => (

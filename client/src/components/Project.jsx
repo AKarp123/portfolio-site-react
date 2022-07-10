@@ -9,7 +9,6 @@ import {
 } from "@mui/material";
 import { v4 } from "uuid";
 
-
 export default function Project(props) {
     const [isExpanded, setIsExpanded] = React.useState(false);
 
@@ -35,7 +34,7 @@ export default function Project(props) {
                 <Typography variant="body2">{props.description}</Typography>
             </CardContent>
             <CardActions disableSpacing>
-                <Button type="text"size="small" href={props.link}>
+                <Button type="text" size="small" href={props.link}>
                     Link to App
                 </Button>
                 <Button size="small" onClick={HandleExpandClick}>
@@ -45,11 +44,9 @@ export default function Project(props) {
             </CardActions>
             <Collapse in={isExpanded} timeout="auto" unmountOnExit>
                 <CardContent>
-                    <Typography>
-                        {props.techUsed.map((tech) => (
-                            <Typography key={v4()}>{tech}</Typography>
-                        ))}
-                    </Typography>
+                    {props.techUsed.map((tech) => (
+                        <Typography key={v4()}>{tech}</Typography>
+                    ))}
                 </CardContent>
             </Collapse>
         </Card>
