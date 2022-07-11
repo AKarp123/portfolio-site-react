@@ -23,6 +23,10 @@ export default function Home() {
         };
     };
 
+    const handleMouseHover = () => {
+        setHover(!hover);
+    };
+
     return (
         <>
             <Grid
@@ -38,8 +42,8 @@ export default function Home() {
                     sx={{ alignItems: "flex-start", marginTop: "35vh" }}
                 >
                     <div
-                        onMouseEnter={() => setHover(true)}
-                        onMouseLeave={() => setHover(false)}
+                        onMouseEnter={handleMouseHover}
+                        onMouseLeave={handleMouseHover}
                     >
                         <h1 className="Home-Name">Ashton Karp</h1>
 
