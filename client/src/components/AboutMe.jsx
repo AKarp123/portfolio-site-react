@@ -25,9 +25,9 @@ export default class AboutMe extends Component {
                 <Container maxWidth="lg">
                     <Typography
                         variant="h2"
-                        paddingBottom="0.35em"
-                        gutterBottom
-                        borderBottom={"2px solid white"}
+                            paddingBottom="0.35em"
+                            gutterBottom
+                            borderBottom={"2px solid white"}
                     >
                         About Me
                     </Typography>
