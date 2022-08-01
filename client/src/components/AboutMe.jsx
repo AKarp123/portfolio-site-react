@@ -3,6 +3,7 @@ import NavHome from "./NavHome";
 import TabBar from "./AboutMe/TabBar";
 import { Container } from "@mui/system";
 import { Typography } from "@mui/material";
+import Main from "./AboutMe/Main";
 
 export default class AboutMe extends Component {
     constructor(props) {
@@ -32,7 +33,7 @@ export default class AboutMe extends Component {
                         About Me
                     </Typography>
                     <TabBar handleTabBarChange={this.handleTabBarChange} />
-                    <div>{this.state.value}</div>
+                    <div><Main num={this.state.value}/></div>
                 </Container>
             </>
         );

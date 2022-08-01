@@ -17,7 +17,7 @@ export default function TabBar(props) {
     };
 
     return (
-        <Box sx={{ width: "100%" }}>
+        <Box sx={{ width: "100%", marginBottom: "2vh" }}>
             <Tabs value={value} onChange={handleChange} centered>
                 <Tab label="Bio" sx={tabCss} />
                 <Tab label="Experience" sx={tabCss} />

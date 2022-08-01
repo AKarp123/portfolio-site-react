@@ -31,26 +31,12 @@ const projects = [
         ],
     },
     {
-        title: "Kawambiit's Osu Site v3",
+        title: "Kawambiit's Osu Site",
         time: "2022-2022",
         description: "Website to show my osu skins and stats. Third version of the site made upgrades to React and Material-UI.",
         link: "https://kawambit.github.io/osu-site/",
-        techUsed: [ "React", "React-Router-Dom", "Material-UI", "HerokuApp", "Express.js", "Axios", "osu-api-extended (npm package)"]
+        techUsed: [ "React", "React-Router-Dom", "Material-UI", "HerokuApp", "Express.js", "Axios", "osu-api-extended (npm package)", "Bootstrap (V1 and V2 only)"]
     },
-    {
-        title: "Kawambiit's Osu Site v2",
-        time: "2022-2022",
-        description: "Website to show my osu skins and stats. Second version of the site. This version was made using EJS templating and Express.js.", 
-        link: "https://kawambit.github.io/osu-site/",
-        techUsed: [ "Bootstrap", "HerokuApp", "Express.js", "EJS", "osu-api-extended (npm package)"]
-    },
-    {
-        title: "Kawambiit's Osu Site v1",
-        time: "2022-2022",
-        description: "Static site showing some of my skins and stats.", 
-        link: "https://kawambit.github.io/osu-site/",
-        techUsed: [ "Bootstrap", "Github"]
-    }
 ];
 
 export default class Projects extends Component {
