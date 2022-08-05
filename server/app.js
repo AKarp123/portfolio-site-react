@@ -10,16 +10,6 @@ app.use((req, res, next) => {
     next();
 });
 
-app.get("/api/getLeaderboard", (req, res) => {
-    res.json({
-        success: true,
-        lb: [
-            { user: "Ashton Karp", wins: 3, losses: 2 },
-            { user: "Ron Kogan", wins: 2, losses: 4 },
-        ],
-    });
-});
-
 app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "../client/build", "index.html"));
 });
