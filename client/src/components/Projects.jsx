@@ -7,7 +7,7 @@ import { Typography } from "@mui/material";
 
 const projects = [
     {
-        title: "Portfolio Website",
+        title: "Portfolio Website - Work In Progress",
         time: "2022-2022",
         description: "Website created to highlight projects and skills.",
         link: "#",
@@ -15,17 +15,25 @@ const projects = [
         techUsed: ["React.js", "React-Router-Dom", "Material-UI", "HerokuApp"],
     },
     {
-        title: "South Predictions",
+        title: "Online Todo List - Under Development",
+        time: "August 2022",
+        description: "An simple online todo list that allows users to create, edit, and delete tasks using Google Firestore as a database.",
+        link: "#",
+        repo: "https://github.com/AKarp123/todo-app",
+        techUsed: ["React.js", "Firebase", "Material-UI"],
+    },
+    {
+        title: "South Predictions - Work in Progress",
         time: "2022-2022",
         description:
-            "Allows High School South Students to predict events in school and discuss on the forum",
+            "Allows High School South Students to predict events in school and discuss on the forum.",
         link: "https://southpredictions.herokuapp.com",
         techUsed: [
             "React",
             "React-Router-Dom",
             "Material-UI",
             "Express.js",
-            "Firebase Auth",
+            "Google Firebase",
             "Firestore",
             "HerokuApp",
         ],
@@ -33,7 +41,7 @@ const projects = [
     {
         title: "Kawambiit's Osu Site",
         time: "2022-2022",
-        description: "Website to show my osu skins and stats. Third version of the site made upgrades to React and Material-UI.",
+        description: "Fun side project to display my osu stats. Third version of the site made upgrades to React and Material-UI.",
         link: "https://kawambit.github.io/osu-site/",
         techUsed: [ "React", "React-Router-Dom", "Material-UI", "HerokuApp", "Express.js", "Axios", "osu-api-extended (npm package)", "Bootstrap (V1 and V2 only)"]
     },
