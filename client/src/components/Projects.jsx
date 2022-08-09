@@ -42,7 +42,7 @@ const projects = [
         title: "Kawambiit's Osu Site",
         time: "2022-2022",
         description: "Fun side project to display my osu stats. Third version of the site made upgrades to React and Material-UI.",
-        link: "https://kawambit.github.io/osu-site/",
+        link: "https://kawaosusite.herokuapp.com/",
         techUsed: [ "React", "React-Router-Dom", "Material-UI", "HerokuApp", "Express.js", "Axios", "osu-api-extended (npm package)", "Bootstrap (V1 and V2 only)"]
     },
 ];
