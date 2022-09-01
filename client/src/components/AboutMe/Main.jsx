@@ -10,7 +10,7 @@ export default function Main(props) {
         );
     }
 
-    if (props.num == 1) {
+    if (props.num === 1) {
         const experience = [
             "React",
             "Express",

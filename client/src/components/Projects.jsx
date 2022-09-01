@@ -26,8 +26,9 @@ const projects = [
         title: "South Predictions - Work in Progress",
         time: "2022-2022",
         description:
-            "Allows High School South Students to predict events in school and discuss on the forum.",
+            "A web app in which students can predict on the outcome of events in our school such as a game or a sporting event.",
         link: "https://southpredictions.herokuapp.com",
+        repo: "https://github.com/g1gabyt3333/southpredictions",
         techUsed: [
             "React",
             "React-Router-Dom",
