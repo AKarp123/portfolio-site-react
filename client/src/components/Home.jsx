@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, Link as MUILink } from "@mui/material";
 import { Link } from "react-router-dom";
 import "../Home.css";
 import Github from "../imgs/github-icon.webp";
@@ -46,19 +46,6 @@ export default function Home() {
                         onMouseLeave={handleMouseHover}
                     >
                         <h1 className="Home-Name">Ashton Karp</h1>
-
-                        <a
-                            href="https://github.com/AKarp123/"
-                            className={
-                                hover ? "Home-Github-Hover" : "Home-Github"
-                            }
-                        >
-                            <img
-                                src={Github}
-                                alt="Github"
-                                style={{ height: "250px", width: "250px" }}
-                            ></img>
-                        </a>
                     </div>
                 </Grid>
                 <Grid item lg={2} xs={12} sx={{ marginTop: "35vh" }}>
@@ -77,6 +64,15 @@ export default function Home() {
                         sx={homeLinkStyles()}
                     >
                         Projects
+                    </Typography>
+                    <Typography
+                        as={MUILink}
+                        href="https://github.com/AKarp123/"
+                        target="_blank"
+                        className="Home-Link"
+                        sx={{...homeLinkStyles(), textDecoration: "none", color: "white"}}
+                    >
+                        GitHub
                     </Typography>
                 </Grid>
             </Grid>

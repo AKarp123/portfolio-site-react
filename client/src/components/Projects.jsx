@@ -15,9 +15,19 @@ const projects = [
         techUsed: ["React.js", "React-Router-Dom", "Material-UI", "HerokuApp"],
     },
     {
+        title: "SchoolPrioritizer (WWPHacks Winner)",
+        time: "2022-2022",
+        description:
+            "A simple site that helps students organize school work. Application made for the WWPHacks hackathon. Won best beginner hack.",
+        link: "https://devpost.com/software/schoolprioritizer",
+        repo: "https://github.com/AKarp123/wwphacks",
+        techUsed: ["React.js", "Material-UI", "Firebase", "Vercel"]
+    },
+    {
         title: "Online Todo List - Under Development",
         time: "August 2022",
-        description: "An simple online todo list that allows users to create, edit, and delete tasks using Google Firestore as a database.",
+        description:
+            "An simple online todo list that allows users to create, edit, and delete tasks using Google Firestore as a database.",
         link: "#",
         repo: "https://github.com/AKarp123/todo-app",
         techUsed: ["React.js", "Firebase", "Material-UI"],
@@ -42,9 +52,19 @@ const projects = [
     {
         title: "Kawambiit's Osu Site",
         time: "2022-2022",
-        description: "Fun side project to display my osu stats. Third version of the site made upgrades to React and Material-UI.",
+        description:
+            "Fun side project to display my osu stats. Third version of the site made upgrades to React and Material-UI.",
         link: "https://kawaosusite.herokuapp.com/",
-        techUsed: [ "React", "React-Router-Dom", "Material-UI", "HerokuApp", "Express.js", "Axios", "osu-api-extended (npm package)", "Bootstrap (V1 and V2 only)"]
+        techUsed: [
+            "React",
+            "React-Router-Dom",
+            "Material-UI",
+            "HerokuApp",
+            "Express.js",
+            "Axios",
+            "osu-api-extended (npm package)",
+            "Bootstrap (V1 and V2 only)",
+        ],
     },
 ];
 
