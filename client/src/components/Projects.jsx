@@ -37,7 +37,7 @@ const projects = [
         time: "2022-2022",
         description:
             "A web app in which students can predict on the outcome of events in our school such as a game or a sporting event.",
-        link: "https://southpredictions.herokuapp.com",
+        link: "https://southpredictions.vercel.app",
         repo: "https://github.com/g1gabyt3333/southpredictions",
         techUsed: [
             "React",
@@ -54,7 +54,7 @@ const projects = [
         time: "2022-2022",
         description:
             "Fun side project to display my osu stats. Third version of the site made upgrades to React and Material-UI.",
-        link: "https://kawaosusite.herokuapp.com/",
+        link: "https://kawaosusite.vercel.app/",
         techUsed: [
             "React",
             "React-Router-Dom",
