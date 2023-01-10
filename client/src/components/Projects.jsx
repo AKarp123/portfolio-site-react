@@ -50,6 +50,22 @@ const projects = [
         ],
     },
     {
+        title: "DoujinMusicExplorer - Work in Progress",
+        time: "2022-2022",
+        description:
+            "Web application for exploring Doujin (indie) music from Japan and look out for new releases. Currently in early development.",
+        link: "",
+        repo: "https://github.com/g1gabyt3333/DoujinMusicExplorer",
+        techUsed: [
+            "React",
+            "React-Router-Dom",
+            "Material-UI",
+            "Vercel",
+            "Google Firebase",
+            "Firestore",
+        ],
+    },
+    {
         title: "Kawambiit's Osu Site",
         time: "2022-2022",
         description:
