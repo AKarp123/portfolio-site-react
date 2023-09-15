@@ -14,12 +14,14 @@ const darkTheme = createTheme({
 function App() {
     return (
         <div className="App">
-            <ThemeProvider theme={darkTheme}>{routes()}</ThemeProvider>
+            <ThemeProvider theme={darkTheme}>
+                <Routes />
+            </ThemeProvider>
         </div>
     );
 }
 
-const routes = () => {
+const Routes = () => {
     return (
         <Switch>
             <Route exact path="/" component={Home} />
