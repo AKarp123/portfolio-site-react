@@ -5,7 +5,7 @@ export default function Main(props) {
     if (props.num === 0) {
         return (
             <Typography variant="body1" gutterBottom>
-                Just a high school student who is learning programming :{")"}
+                Rutgers Class of 2027 - Computer Science
             </Typography>
         );
     }
