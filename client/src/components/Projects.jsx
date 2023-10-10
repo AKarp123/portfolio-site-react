@@ -1,5 +1,5 @@
 import { Container } from "@mui/system";
-import React, { Component } from "react";
+import React from "react";
 import NavHome from "./NavHome";
 import Project from "./Project";
 import { v4 } from "uuid";
@@ -21,7 +21,7 @@ const projects = [
             "A simple site that helps students organize school work. Application made for the WWPHacks hackathon. Won best beginner hack.",
         link: "https://devpost.com/software/schoolprioritizer",
         repo: "https://github.com/AKarp123/wwphacks",
-        techUsed: ["React.js", "Material-UI", "Firebase", "Vercel"]
+        techUsed: ["React.js", "Material-UI", "Firebase", "Vercel"],
     },
     {
         title: "Online Todo List - Under Development",
@@ -84,35 +84,33 @@ const projects = [
     },
 ];
 
-export default class Projects extends Component {
-    render() {
-        return (
-            <div>
-                <NavHome />
+export default function Projects() {
+    return (
+        <div>
+            <NavHome />
 
-                <Container maxWidth="lg">
-                    <Typography
-                        variant="h4"
-                        component="h1"
-                        paddingBottom="0.7em"
-                        marginBottom="0.7em"
-                        borderBottom={"2px solid white"}
-                    >
-                        My Projects
-                    </Typography>
-                    {projects.map((project) => (
-                        <Project
-                            key={v4()}
-                            title={project.title}
-                            time={project.time}
-                            description={project.description}
-                            link={project.link}
-                            techUsed={project.techUsed}
-                            repo={project.repo}
-                        />
-                    ))}
-                </Container>
-            </div>
-        );
-    }
+            <Container maxWidth="lg">
+                <Typography
+                    variant="h4"
+                    component="h1"
+                    paddingBottom="0.7em"
+                    marginBottom="0.7em"
+                    borderBottom={"2px solid white"}
+                >
+                    My Projects
+                </Typography>
+                {projects.map((project) => (
+                    <Project
+                        key={v4()}
+                        title={project.title}
+                        time={project.time}
+                        description={project.description}
+                        link={project.link}
+                        techUsed={project.techUsed}
+                        repo={project.repo}
+                    />
+                ))}
+            </Container>
+        </div>
+    );
 }
