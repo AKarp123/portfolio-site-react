@@ -79,18 +79,18 @@ export default function Home() {
                     <></>
                 )} */}
 
-                <Fade in={loaded} timeout={1000}>
-                    <Grid
-                        item
-                        lg={12}
-                        xs={12}
-                        sx={{
-                            marginTop: "35vh",
-                            fontFamily: "Montserrat",
-                            alignItems: "flex-start",
-                            justifyContent: "center",
-                        }}
-                    >
+                <Grid
+                    item
+                    lg={12}
+                    xs={12}
+                    sx={{
+                        marginTop: "35vh",
+                        fontFamily: "Montserrat",
+                        alignItems: "flex-start",
+                        justifyContent: "center",
+                    }}
+                >
+                    <Fade in={!loading} timeout={1000}>
                         {music.success ? (
                             <MUILink
                                 href={music.url}
@@ -113,10 +113,9 @@ export default function Home() {
                             >
                                 &nbsp;
                             </MUILink>
-                            
                         )}
-                    </Grid>
-                </Fade>
+                    </Fade>
+                </Grid>
 
                 <Fade in={true} timeout={2000}>
                     <Grid
