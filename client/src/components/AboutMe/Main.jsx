@@ -32,5 +32,13 @@ export default function Main(props) {
         );
     }
 
+    if (props.num === 2) {
+        return (
+            <Typography variant="body1" gutterBottom>
+                Coming soon...
+            </Typography>
+        );
+    }
+
     return <div>{props.num}</div>;
 }

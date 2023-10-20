@@ -17,12 +17,7 @@ export default function AboutMe() {
             <NavHome />
 
             <Container maxWidth="lg">
-                <Typography
-                    variant="h2"
-                    paddingBottom="0.35em"
-                    gutterBottom
-                    borderBottom={"2px solid white"}
-                >
+                <Typography variant="h2" sx={{ fontWeight: 500 }}>
                     About Me
                 </Typography>
                 <TabBar handleTabBarChange={handleTabBarChange} />

@@ -1,8 +1,16 @@
 import React, { useEffect } from "react";
-import { Grid, Typography, Link as MUILink, Collapse, Button } from "@mui/material";
+import {
+    Grid,
+    Typography,
+    Link as MUILink,
+    Collapse,
+    Tooltip,
+    Fade,
+} from "@mui/material";
 import { Link } from "react-router-dom";
 import "../Home.css";
-import Github from "../imgs/github-icon.webp";
+import { functions } from "../firebase";
+import { useHttpsCallable } from "react-firebase-hooks/functions";
 
 const homeLinkStyles = () => ({
     fontSize: "1.4em",
@@ -11,18 +19,27 @@ const homeLinkStyles = () => ({
 export default function Home() {
     const [clicked, setClicked] = React.useState(false);
     const [loaded, setLoaded] = React.useState(false);
+    const [music, setMusic] = React.useState({});
+    const [getLastFM, loading, error] = useHttpsCallable(
+        functions,
+        "getLastFM"
+    );
 
     useEffect(() => {
         setLoaded(true);
+        getLastFM().then((result) => {
+            // console.log(result);
+
+            setMusic({ ...result.data });
+        });
     }, []);
 
-    const onLoadHome = () => {
-        return {
-            opacity: loaded ? 1 : 0,
-            transition: "opacity 1s ease-in-out",
-        };
-    };
-    
+    // const onLoadHome = () => {
+    //     return {
+    //         opacity: loaded ? 1 : 0,
+    //         transition: "opacity 1s ease-in-out",
+    //     };
+    // };
 
     const onClick = () => {
         console.log("clicked");
@@ -31,26 +48,57 @@ export default function Home() {
 
     return (
         <>
-            <Grid
-                container
-                spacing={3}
-                justifyContent="center"
-                sx={onLoadHome()}
-            >
-                <Grid
-                    item
-                    lg={2}
-                    xs={12}
-                    sx={{
-                        alignItems: "flex-start",
-                        marginTop: "35vh",
-                        justifyContent: "center",
-                    }}
-                >
-                    <div onClick={onClick} style={{cursor: "pointer"}}>
-                        <h1 className="Home-Name">Ashton Karp</h1>
-                    </div>
-                </Grid>
+            <Grid container spacing={1} justifyContent="center">
+                {music.success ? (
+                    <Fade in={loaded} timeout={1000}>
+                        <Grid
+                            item
+                            lg={12}
+                            xs={12}
+                            sx={{
+                                marginTop: "35vh",
+                                fontFamily: "Montserrat",
+                                alignItems: "flex-start",
+                                justifyContent: "center",
+                            }}
+                        >
+                            <MUILink
+                                href={music.url}
+                                target="_blank"
+                                rel="noopener"
+                                underline="none"
+                                color="inherit"
+                            >
+                                {music.isPlaying
+                                    ? `Now Playing: ${music.artist} - ${music.song}`
+                                    : `Last Played: ${music.artist} - ${music.song}`}
+                            </MUILink>
+                        </Grid>
+                    </Fade>
+                ) : (
+                    <></>
+                )}
+
+                <Fade in={true} timeout={2000}>
+                    <Grid
+                        item
+                        lg={12}
+                        xs={12}
+                        sx={{
+                            justifyContent: "center",
+                            mt: "0.5vh"
+                        }}
+                    >
+                        <Tooltip title="Click me!" arrow placement="top">
+                            <div
+                                onClick={onClick}
+                                style={{ cursor: "pointer" }}
+                            >
+                                <h1 className="Home-Name">Ashton Karp</h1>
+                            </div>
+                        </Tooltip>
+                    </Grid>
+                </Fade>
             </Grid>
             <Collapse in={clicked}>
                 <Grid container spacing={3} justifyContent="center">
