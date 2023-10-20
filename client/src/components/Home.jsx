@@ -127,18 +127,13 @@ export default function Home() {
                             mt: "0.5vh",
                         }}
                     >
-                        <Tooltip title="Click me!" arrow placement="top">
-                            <div
-                                onClick={onClick}
-                                style={{ cursor: "pointer" }}
-                            >
-                                <h1 className="Home-Name">Ashton Karp</h1>
-                            </div>
-                        </Tooltip>
+                        <div>
+                            <h1 className="Home-Name">Ashton Karp</h1>
+                        </div>
                     </Grid>
                 </Fade>
             </Grid>
-            <Collapse in={clicked}>
+            <Collapse in={loaded} timeout={1000}>
                 <Grid container spacing={3} justifyContent="center">
                     <Grid item lg={1} xs={12}>
                         <Typography
