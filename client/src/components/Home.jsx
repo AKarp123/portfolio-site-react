@@ -49,7 +49,7 @@ export default function Home() {
     return (
         <>
             <Grid container spacing={1} justifyContent="center">
-                {music.success ? (
+                {/* {music.success ? (
                     <Fade in={loaded} timeout={1000}>
                         <Grid
                             item
@@ -77,7 +77,46 @@ export default function Home() {
                     </Fade>
                 ) : (
                     <></>
-                )}
+                )} */}
+
+                <Fade in={loaded} timeout={1000}>
+                    <Grid
+                        item
+                        lg={12}
+                        xs={12}
+                        sx={{
+                            marginTop: "35vh",
+                            fontFamily: "Montserrat",
+                            alignItems: "flex-start",
+                            justifyContent: "center",
+                        }}
+                    >
+                        {music.success ? (
+                            <MUILink
+                                href={music.url}
+                                target="_blank"
+                                rel="noopener"
+                                underline="none"
+                                color="inherit"
+                            >
+                                {music.isPlaying
+                                    ? `Now Playing: ${music.artist} - ${music.song}`
+                                    : `Last Played: ${music.artist} - ${music.song}`}
+                            </MUILink>
+                        ) : (
+                            <MUILink
+                                href={"#"}
+                                target="_blank"
+                                rel="noopener"
+                                underline="none"
+                                color="inherit"
+                            >
+                                &nbsp;
+                            </MUILink>
+                            
+                        )}
+                    </Grid>
+                </Fade>
 
                 <Fade in={true} timeout={2000}>
                     <Grid
@@ -86,7 +125,7 @@ export default function Home() {
                         xs={12}
                         sx={{
                             justifyContent: "center",
-                            mt: "0.5vh"
+                            mt: "0.5vh",
                         }}
                     >
                         <Tooltip title="Click me!" arrow placement="top">
