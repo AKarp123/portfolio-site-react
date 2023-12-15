@@ -8,15 +8,34 @@ import { Typography } from "@mui/material";
 const projects = [
     {
         title: "Portfolio Website",
-        time: "2022-2022",
+        time: "Present",
         description: "Website created to highlight projects and skills.",
         link: "#",
         repo: "https://github.com/AKarp123/portfolio-site-react",
         techUsed: ["React.js", "React-Router-Dom", "Material-UI", "Vercel"],
     },
     {
+        title: "Kawambiit's Osu Site",
+        time: "Present",
+        description:
+            "Fun side project to display my osu stats. Third version of the site made upgrades to React and Material-UI.",
+        link: "kawambiit.xyz",
+        techUsed: [
+            "React",
+            "React-Router-Dom",
+            "Material-UI",
+            "HerokuApp",
+            "Firebase",
+            "Express.js (V2 Only)",
+            "Axios",
+            "osu-api-extended (npm package)",
+            "Bootstrap (V1 and V2 only)",
+            "JQuery (V1 and V2 only)",
+        ],
+    },
+    {
         title: "SchoolPrioritizer (WWPHacks Winner)",
-        time: "2022-2022",
+        time: "2022",
         description:
             "A simple site that helps students organize school work. Application made for the WWPHacks hackathon. Won best beginner hack.",
         link: "https://devpost.com/software/schoolprioritizer",
@@ -65,25 +84,7 @@ const projects = [
     //         "Firestore",
     //     ],
     // },
-    {
-        title: "Kawambiit's Osu Site",
-        time: "2022-2022",
-        description:
-            "Fun side project to display my osu stats. Third version of the site made upgrades to React and Material-UI.",
-        link: "kawambiit.xyz",
-        techUsed: [
-            "React",
-            "React-Router-Dom",
-            "Material-UI",
-            "HerokuApp",
-            "Firebase",
-            "Express.js (V2 Only)",
-            "Axios",
-            "osu-api-extended (npm package)",
-            "Bootstrap (V1 and V2 only)",
-            "JQuery (V1 and V2 only)",
-        ],
-    },
+    
 ];
 
 export default function Projects() {
