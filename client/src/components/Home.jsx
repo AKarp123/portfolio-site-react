@@ -88,33 +88,28 @@ export default function Home() {
                         fontFamily: "Montserrat",
                         alignItems: "flex-start",
                         justifyContent: "center",
+                        
                     }}
                 >
-                    <Fade in={!loading} timeout={1000}>
-                        {music.success ? (
+                        <Fade in={!loading && music.success} timeout={1000}>
                             <MUILink
                                 href={music.url}
                                 target="_blank"
                                 rel="noopener"
                                 underline="none"
                                 color="inherit"
+                                sx={{
+                                    fontSize: "1.2m",
+                                    textDecoration: "none",
+                                    color: "white",
+                                    lineHeight: "1.5em",
+                                }}
                             >
                                 {music.isPlaying
                                     ? `Now Playing: ${music.artist} - ${music.song}`
                                     : `Last Played: ${music.artist} - ${music.song}`}
                             </MUILink>
-                        ) : (
-                            <MUILink
-                                href={"#"}
-                                target="_blank"
-                                rel="noopener"
-                                underline="none"
-                                color="inherit"
-                            >
-                                &nbsp;
-                            </MUILink>
-                        )}
-                    </Fade>
+                        </Fade>
                 </Grid>
 
                 <Fade in={true} timeout={2000}>
@@ -125,6 +120,7 @@ export default function Home() {
                         sx={{
                             justifyContent: "center",
                             mt: "0.5vh",
+                            mb: "0.5vh",
                         }}
                     >
                         <div>

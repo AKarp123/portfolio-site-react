@@ -7,12 +7,12 @@ import { Typography } from "@mui/material";
 
 const projects = [
     {
-        title: "Portfolio Website - Work In Progress",
+        title: "Portfolio Website",
         time: "2022-2022",
         description: "Website created to highlight projects and skills.",
         link: "#",
         repo: "https://github.com/AKarp123/portfolio-site-react",
-        techUsed: ["React.js", "React-Router-Dom", "Material-UI", "HerokuApp"],
+        techUsed: ["React.js", "React-Router-Dom", "Material-UI", "Vercel"],
     },
     {
         title: "SchoolPrioritizer (WWPHacks Winner)",
@@ -23,63 +23,65 @@ const projects = [
         repo: "https://github.com/AKarp123/wwphacks",
         techUsed: ["React.js", "Material-UI", "Firebase", "Vercel"],
     },
-    {
-        title: "Online Todo List - Under Development",
-        time: "August 2022",
-        description:
-            "An simple online todo list that allows users to create, edit, and delete tasks using Google Firestore as a database.",
-        link: "#",
-        repo: "https://github.com/AKarp123/todo-app",
-        techUsed: ["React.js", "Firebase", "Material-UI"],
-    },
-    {
-        title: "South Predictions - Work in Progress",
-        time: "2022-2022",
-        description:
-            "A web app in which students can predict on the outcome of events in our school such as a game or a sporting event. An example of the application is on the github page",
-        link: "https://southpredictions.vercel.app",
-        repo: "https://github.com/g1gabyt3333/southpredictions",
-        techUsed: [
-            "React",
-            "React-Router-Dom",
-            "Material-UI",
-            "Express.js",
-            "Google Firebase",
-            "Firestore",
-            "HerokuApp",
-        ],
-    },
-    {
-        title: "DoujinMusicExplorer - Work in Progress",
-        time: "2022-2022",
-        description:
-            "Web application for exploring Doujin (indie) music from Japan and look out for new releases. Currently in early development.",
-        link: "",
-        repo: "https://github.com/g1gabyt3333/DoujinMusicExplorer",
-        techUsed: [
-            "React",
-            "React-Router-Dom",
-            "Material-UI",
-            "Vercel",
-            "Google Firebase",
-            "Firestore",
-        ],
-    },
+    // {
+    //     title: "Online Todo List - Under Development",
+    //     time: "August 2022",
+    //     description:
+    //         "An simple online todo list that allows users to create, edit, and delete tasks using Google Firestore as a database.",
+    //     link: "#",
+    //     repo: "https://github.com/AKarp123/todo-app",
+    //     techUsed: ["React.js", "Firebase", "Material-UI"],
+    // },
+    // {
+    //     title: "South Predictions - Work in Progress",
+    //     time: "2022-2022",
+    //     description:
+    //         "A web app in which students can predict on the outcome of events in our school such as a game or a sporting event. An example of the application is on the github page",
+    //     link: "https://southpredictions.vercel.app",
+    //     repo: "https://github.com/g1gabyt3333/southpredictions",
+    //     techUsed: [
+    //         "React",
+    //         "React-Router-Dom",
+    //         "Material-UI",
+    //         "Express.js",
+    //         "Google Firebase",
+    //         "Firestore",
+    //         "HerokuApp",
+    //     ],
+    // },
+    // {
+    //     title: "DoujinMusicExplorer - Work in Progress",
+    //     time: "2022-2022",
+    //     description:
+    //         "Web application for exploring Doujin (indie) music from Japan and look out for new releases. Currently in early development.",
+    //     link: "",
+    //     repo: "https://github.com/g1gabyt3333/DoujinMusicExplorer",
+    //     techUsed: [
+    //         "React",
+    //         "React-Router-Dom",
+    //         "Material-UI",
+    //         "Vercel",
+    //         "Google Firebase",
+    //         "Firestore",
+    //     ],
+    // },
     {
         title: "Kawambiit's Osu Site",
         time: "2022-2022",
         description:
             "Fun side project to display my osu stats. Third version of the site made upgrades to React and Material-UI.",
-        link: "https://kawaosusite.vercel.app/",
+        link: "kawambiit.xyz",
         techUsed: [
             "React",
             "React-Router-Dom",
             "Material-UI",
             "HerokuApp",
-            "Express.js",
+            "Firebase",
+            "Express.js (V2 Only)",
             "Axios",
             "osu-api-extended (npm package)",
             "Bootstrap (V1 and V2 only)",
+            "JQuery (V1 and V2 only)",
         ],
     },
 ];
