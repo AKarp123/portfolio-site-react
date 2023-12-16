@@ -19,7 +19,7 @@ const projects = [
         time: "Present",
         description:
             "Fun side project to display my osu stats. Third version of the site made upgrades to React and Material-UI.",
-        link: "kawambiit.xyz",
+        link: "https://kawambiit.xyz",
         techUsed: [
             "React",
             "React-Router-Dom",
