@@ -25,12 +25,10 @@ export default function Project(props) {
     return (
         <Card sx={{ minWidth: 275, textAlign: "left", marginBottom: "3vh" }}>
             <CardContent>
-                <Typography variant="h5" component="div">
+                <Typography variant="h5" component="div" sx={{mb: 1.5}}>
                     {props.title}
                 </Typography>
-                <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                    {props.time}
-                </Typography>
+                
                 <Typography variant="body2">{props.description}</Typography>
             </CardContent>
             <CardActions disableSpacing>

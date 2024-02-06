@@ -34,6 +34,18 @@ const projects = [
         ],
     },
     {
+        title: "Osu Profile Comments",
+        time: "Present",
+        description: "Enable osu players to comment on other peoples' profiles! (currently not deployed to a site)",
+        link: "https://github.com/AKarp123/OsuProfileRatings/",
+        techUsed: [
+            "React",
+            "MongoDB",
+            "ExpressJS",
+            "NodeJS"
+        ]
+    },
+    {
         title: "SchoolPrioritizer (WWPHacks Winner)",
         time: "2022",
         description:
