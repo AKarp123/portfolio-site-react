@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import { Switch, Route } from "react-router-dom";
 import AboutMe from "./components/AboutMe";
 import projects from "./components/Projects";
+import { CssBaseline } from "@mui/material";
 
 const darkTheme = createTheme({
     palette: {
@@ -15,6 +16,7 @@ function App() {
     return (
         <div className="App">
             <ThemeProvider theme={darkTheme}>
+                <CssBaseline />
                 <Routes />
             </ThemeProvider>
         </div>

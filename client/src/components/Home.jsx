@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
 import {
-    Grid,
+    Container,
     Typography,
     Link as MUILink,
     Collapse,
-    Tooltip,
+    Stack,
     Fade,
+    Paper,
+    Divider,
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import "../Home.css";
@@ -14,6 +16,8 @@ import { useHttpsCallable } from "react-firebase-hooks/functions";
 
 const homeLinkStyles = () => ({
     fontSize: "1.4em",
+    textDecoration: "none",
+    color: "white",
 });
 
 export default function Home() {
@@ -47,127 +51,89 @@ export default function Home() {
     };
 
     return (
-        <>
-            <Grid container spacing={1} justifyContent="center">
-                {/* {music.success ? (
-                    <Fade in={loaded} timeout={1000}>
-                        <Grid
-                            item
-                            lg={12}
-                            xs={12}
-                            sx={{
-                                marginTop: "35vh",
-                                fontFamily: "Montserrat",
-                                alignItems: "flex-start",
-                                justifyContent: "center",
-                            }}
-                        >
-                            <MUILink
-                                href={music.url}
-                                target="_blank"
-                                rel="noopener"
-                                underline="none"
-                                color="inherit"
-                            >
-                                {music.isPlaying
-                                    ? `Now Playing: ${music.artist} - ${music.song}`
-                                    : `Last Played: ${music.artist} - ${music.song}`}
-                            </MUILink>
-                        </Grid>
-                    </Fade>
-                ) : (
-                    <></>
-                )} */}
-
-                <Grid
-                    item
-                    lg={12}
-                    xs={12}
+        <Container
+            sx={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "100vh",
+            }}
+        >
+            <Fade in={!loading && music.success} timeout={1000}>
+                <MUILink
+                    href={music.url}
+                    target="_blank"
+                    rel="noopener"
+                    underline="none"
+                    color="inherit"
                     sx={{
-                        marginTop: "35vh",
-                        fontFamily: "Montserrat",
-                        alignItems: "flex-start",
-                        justifyContent: "center",
-                        
+                        fontSize: "1.2m",
+                        textDecoration: "none",
+                        color: "white",
+                        lineHeight: "1.5em",
+                        fontFamily: "Montserrat, Roboto, sans-serif",
                     }}
                 >
-                        <Fade in={!loading && music.success} timeout={1000}>
-                            <MUILink
-                                href={music.url}
-                                target="_blank"
-                                rel="noopener"
-                                underline="none"
-                                color="inherit"
-                                sx={{
-                                    fontSize: "1.2m",
-                                    textDecoration: "none",
-                                    color: "white",
-                                    lineHeight: "1.5em",
-                                }}
-                            >
-                                {music.isPlaying
-                                    ? `Now Playing: ${music.artist} - ${music.song}`
-                                    : `Last Played: ${music.artist} - ${music.song}`}
-                            </MUILink>
-                        </Fade>
-                </Grid>
+                    {music.isPlaying
+                        ? `Now Playing: ${music.artist} - ${music.song}`
+                        : `Last Played: ${music.artist} - ${music.song}`}
+                </MUILink>
+            </Fade>
 
+            <Paper
+                sx={{
+                    padding: "3% 0 ",
+                    width: { xs: "90%", sm: "450px" },
+                    margin: "0 auto",
+                    border: "1.5px solid #495057",
+                    borderRadius: "10px",
+                    backgroundColor: "rgba(56, 56, 56, 0.5)",
+                    " -webkit-backdrop-filter": "blur(3px)",
+                    "backdrop-filter": "blur(3px)",
+                }}
+            >
                 <Fade in={true} timeout={2000}>
-                    <Grid
-                        item
-                        lg={12}
-                        xs={12}
+                    <Typography
                         sx={{
-                            justifyContent: "center",
-                            mt: "0.5vh",
-                            mb: "0.5vh",
+                            fontSize: "2.5em",
+                            textAlign: "center",
                         }}
                     >
-                        <div>
-                            <h1 className="Home-Name">Ashton Karp</h1>
-                        </div>
-                    </Grid>
+                        Ashton Karp
+                    </Typography>
                 </Fade>
-            </Grid>
-            <Collapse in={loaded} timeout={1000}>
-                <Grid container spacing={3} justifyContent="center">
-                    <Grid item lg={1} xs={12}>
-                        <Typography
-                            as={Link}
-                            to="/about"
-                            className="Home-Link"
-                            sx={homeLinkStyles()}
-                        >
+                <Divider sx={{ my: 2 }} />
+                <Collapse in={loaded} timeout={1000}>
+                    <Stack
+                        sx={{
+                            alignItems: "center",
+                        }}
+                        spacing={10}
+                    >
+                        <Typography as={Link} to="/about" sx={homeLinkStyles()}>
                             About Me
                         </Typography>
-                    </Grid>
-                    <Grid item lg={1} xs={12}>
+
                         <Typography
                             as={Link}
                             to="/projects"
-                            className="Home-Link"
                             sx={homeLinkStyles()}
                         >
                             Projects
                         </Typography>
-                    </Grid>
-                    <Grid item lg={1} xs={12}>
+
                         <Typography
                             as={MUILink}
                             href="https://github.com/AKarp123/"
                             target="_blank"
-                            className="Home-Link"
-                            sx={{
-                                ...homeLinkStyles(),
-                                textDecoration: "none",
-                                color: "white",
-                            }}
+                            sx={homeLinkStyles()}
                         >
                             GitHub
                         </Typography>
-                    </Grid>
-                </Grid>
-            </Collapse>
-        </>
+                    </Stack>
+                </Collapse>
+            </Paper>
+        </Container>
     );
 }
